@@ -1,0 +1,1 @@
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/grid.dir/main.cpp.o  -o grid.exe -Wl,--out-implib,libgrid.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
