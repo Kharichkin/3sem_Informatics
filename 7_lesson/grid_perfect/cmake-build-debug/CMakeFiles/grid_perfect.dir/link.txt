@@ -1,0 +1,1 @@
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/grid_perfect.dir/main.cpp.o  -o grid_perfect.exe -Wl,--out-implib,libgrid_perfect.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
