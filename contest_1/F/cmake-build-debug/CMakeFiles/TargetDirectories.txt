@@ -1,0 +1,3 @@
+/cygdrive/d/Me/MIPT/(3 sem) Informatics/contest_1/F/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/cygdrive/d/Me/MIPT/(3 sem) Informatics/contest_1/F/cmake-build-debug/CMakeFiles/edit_cache.dir
+/cygdrive/d/Me/MIPT/(3 sem) Informatics/contest_1/F/cmake-build-debug/CMakeFiles/F.dir
