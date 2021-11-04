@@ -1,0 +1,5 @@
+DiscreteState: 0.00982
+SegmentState: 0.10815
+SetState: 0.09904
+UnionState: 0.16811
+IntersectionState: 0.00982
