@@ -1,0 +1,1 @@
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/my_vector.dir/main.cpp.o  -o my_vector.exe -Wl,--out-implib,libmy_vector.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

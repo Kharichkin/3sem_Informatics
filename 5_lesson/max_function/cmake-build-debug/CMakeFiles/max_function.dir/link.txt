@@ -1,0 +1,1 @@
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/max_function.dir/main.cpp.o  -o max_function.exe -Wl,--out-implib,libmax_function.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
