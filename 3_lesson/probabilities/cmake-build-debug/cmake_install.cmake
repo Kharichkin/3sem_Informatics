@@ -1,4 +1,4 @@
-# Install script for directory: /cygdrive/d/Me/MIPT/(3 sem) Informatics/3_lesson/probabilities
+# Install script for directory: /cygdrive/d/Me/MIPT/(3 sem) Informatics/3sem_Informatics/3_lesson/probabilities
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/cygdrive/d/Me/MIPT/(3 sem) Informatics/3_lesson/probabilities/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/cygdrive/d/Me/MIPT/(3 sem) Informatics/3sem_Informatics/3_lesson/probabilities/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
