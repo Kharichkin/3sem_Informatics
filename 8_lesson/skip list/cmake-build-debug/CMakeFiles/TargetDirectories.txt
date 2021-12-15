@@ -1,0 +1,3 @@
+D:/Me/MIPT/(3 sem) Informatics/8_lesson/skip list/cmake-build-debug/CMakeFiles/skip_list.dir
+D:/Me/MIPT/(3 sem) Informatics/8_lesson/skip list/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Me/MIPT/(3 sem) Informatics/8_lesson/skip list/cmake-build-debug/CMakeFiles/rebuild_cache.dir

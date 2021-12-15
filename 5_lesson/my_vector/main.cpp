@@ -78,22 +78,19 @@ public:
         }
     }
 
-    template <class U>
-    friend std::ostream& operator<< (std::ostream &out, const Vector<U> &vec);
-};
-
-template<typename T>
-std::ostream& operator<< (std::ostream &output, const Vector<T> &vec){
-    Node<T>* current_node = vec.first_node;
-    output << current_node->value << " ";
-
-    for (int i = 0; i < vec.size() - 1; i++){
-        current_node = current_node->next_node;
+    friend std::ostream& operator << (std::ostream &output, const Vector<T> &vector){
+        Node<T>* current_node = vector.first_node;
         output << current_node->value << " ";
-    }
 
-    return output;
+        for (int i = 0; i < vector.size() - 1; i++){
+            current_node = current_node->next_node;
+            output << current_node->value << " ";
+        }
+
+        return output;
+    }
 };
+
 
 
 int main(){
