@@ -1,4 +1,4 @@
-# Install script for directory: D:/Me/MIPT/(3 sem) Informatics/2_lesson/hash table
+# Install script for directory: D:/Me/MIPT/(3 sem) Informatics/3sem_Informatics/2_lesson/hash table
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/Me/MIPT/(3 sem) Informatics/2_lesson/hash table/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/Me/MIPT/(3 sem) Informatics/3sem_Informatics/2_lesson/hash table/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

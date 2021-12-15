@@ -1,3 +1,0 @@
-/cygdrive/d/Me/MIPT/(3 sem) Informatics/2_lesson/graph1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/cygdrive/d/Me/MIPT/(3 sem) Informatics/2_lesson/graph1/cmake-build-debug/CMakeFiles/edit_cache.dir
-/cygdrive/d/Me/MIPT/(3 sem) Informatics/2_lesson/graph1/cmake-build-debug/CMakeFiles/graph1.dir
