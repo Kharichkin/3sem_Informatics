@@ -1,75 +1,109 @@
 #include <iostream>
 #include <vector>
-#include <string>
-#include <sstream>
-#include <algorithm>
+#include <map>
 
 using namespace std;
 
-bool comp(int a[4], int b[4]){
-    if(a[3] < b[3]){
-        return true;
-    } else if(a[3] = b[3]){
-        if(a[2] < b[2]){
-            return true;
+vector<string> split(const string& str, char delimiter){
+    vector<string> output{""};
+
+    int i = 0;
+    for(auto symbol : str){
+        if(symbol != delimiter) {
+            output[i].push_back(symbol);
+        } else {
+            output.emplace_back("");
+            i++;
         }
-        else if(a[2] = b[2]){
-            if(a[1] < b[1]){
-                return true;
-            } else if(a[1] = b[1]){
-                if(a[4] < b[4]){
-                    return true;
-                } else{
-                    return false;
-                }
-            } else{
-                return false;
-            }
-        } else{
-            return false;
-        }
-    } else{
-        return false;
     }
+    output.pop_back();
+
+    return output;
 }
 
-int main() {
-    vector<int[4]> dates;
-    int N = 0, M = 0;
-    string str;
+struct Date {
+    int day;
+    int month;
+    int year;
+
+    Date() = default;
+
+    Date(const string& date){
+        vector<string> temp = split(date, '.');
+        day = stoi(temp[0]);
+        month = stoi(temp[1]);
+        year = stoi(temp[2]);
+    }
+
+    friend bool operator<(const Date &left, const Date &right){
+        if (left.year < right.year) {
+            return true;
+        }
+        if (right.year < left.year) {
+            return false;
+        }
+
+        if (left.month < right.month) {
+            return true;
+        }
+        if (right.month < left.month) {
+            return false;
+        }
+
+        return left.day < right.day;
+    }
+
+    friend istream &operator>>(istream &input, Date &date) {
+        string temp;
+        input >> temp;
+        date = Date(temp);
+        return input;
+    }
+};
+
+int main(){
+    int N;
+    int M;
+
+    map<Date, int> calendar;
 
     cin >> N;
     for (int i = 0; i < N; i++) {
-        /*getline(cin, str);
-        int pos = str.find('.');
-        int day = stoi(str.substr(0, pos));
-        str.erase(0, pos + 1);
-        pos = str.find('.');
-        int month = stoi(str.substr(0, pos));
-        str.erase(0, pos + 1);
-        pos = str.find(' ');
-        int year = stoi(str.substr(0, pos));
-        str.erase(0, pos + 1);
-        int bursts = stoi(str.substr(0, pos));
-        cout << day << "." << month << "." << year << " " << bursts;*/
-        int day, month, year, bursts;
-        char delimiter;
-        cin >> day;
-        cin >> delimiter;
-        cin >> month;
-        cin >> delimiter;
-        cin >> year;
-        cin >> bursts;
-        dates.push_back({day, month, year, bursts});
+        Date date{};
+        int bursts;
+        cin >> date >> bursts;
+
+        auto current_date = calendar.find(date);
+        if(current_date == calendar.end()){
+            calendar.emplace(date, bursts);
+        } else {
+            if(current_date->second < bursts){
+                current_date->second = bursts;
+            }
+        }
     }
 
-    sort(dates.begin(), dates.end(), comp);
+    int temp = calendar.begin()->second;
+    for(auto& current_date : calendar){
+        if(current_date.second < temp )
+            current_date.second = temp;
+        else
+            temp = current_date.second;
+    }
+
     cin >> M;
+    for (int i = 0; i < M; i++) {
+        Date date{};
+        cin >> date;
 
-    for (int i = 0; i < N; i++) {
-        cout << dates[i];
+        auto current_date = calendar.upper_bound(date);
+        if (current_date == calendar.begin()) {
+            cout << 0 << endl;
+            continue;
+        }
+        current_date--;
+        cout << current_date->second << endl;
     }
-
 
     return 0;
 }

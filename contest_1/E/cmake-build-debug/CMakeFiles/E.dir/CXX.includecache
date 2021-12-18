@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/Me/MIPT/(3 sem) Informatics/3sem_Informatics/contest_1/E/main.cpp
+cmath
+-
+vector
+-
+iostream
+-
+

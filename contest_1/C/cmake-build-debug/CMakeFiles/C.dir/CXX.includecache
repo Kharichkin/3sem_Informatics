@@ -6,15 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/cygdrive/d/Me/MIPT/(3 sem) Informatics/contest_1/C/main.cpp
+D:/Me/MIPT/(3 sem) Informatics/3sem_Informatics/contest_1/C/main.cpp
 iostream
 -
 vector
 -
-string
--
-sstream
--
-algorithm
+map
 -
 
